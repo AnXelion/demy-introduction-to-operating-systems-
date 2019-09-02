@@ -1,0 +1,1 @@
+usleep(1000 * (random() % NUM_READER_THREADS + NUM_WRITER_THREADS));
