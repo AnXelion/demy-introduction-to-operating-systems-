@@ -1,1 +1,1 @@
-# udemy-introduction-to-operating-systems
+# udacity-introduction-to-operating-systems
