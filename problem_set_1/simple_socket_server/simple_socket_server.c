@@ -50,8 +50,11 @@ int main(int argc, int *argv[]) {
     }
 
 
+    // Fix error: lvalue required as unary ‘&’ operand
+    int clientSocketAddrLen = (sizeof(clientSocketAddr));
+
     // Accept a new client
-    if (-1 == (clientSocketFD = accept(socketFD, (struct sockaddr *) &clientSocketAddr, sizeof(clientSocketAddr)))) {
+    if (-1 == (clientSocketFD = accept(socketFD, (struct sockaddr *) &clientSocketAddr, &clientSocketAddrLen))) {
         fprintf(stderr, "Server accept failed\n");
     }
     else {
