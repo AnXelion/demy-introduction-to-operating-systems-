@@ -18,7 +18,7 @@ int main(int argc, int *argv[]) {
     int socketFD = socket(PF_INET, SOCK_STREAM, 0);
     struct sockaddr_in serverSocketAddr;
     
-    // Create socket
+    // Create socket (IPv4, stream-based, protocol likely set to TCP)
     if (-1 == socketFD) {
         perror("Client failed to create socket");
         exit(EXIT_FAILURE);
