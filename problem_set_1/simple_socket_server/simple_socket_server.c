@@ -40,7 +40,7 @@ int main(int argc, int *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    // Listen to  on port
+    // Listen on the socket for up to some maximum pending connections
     if (-1 == listen(socketFD, max_pending_connections)) {
         fprintf(stderr, "Server failed to listen\n");
         exit(EXIT_FAILURE);
